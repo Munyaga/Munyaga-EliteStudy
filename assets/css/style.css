@@ -1,0 +1,74 @@
+/* Add in <style> block */
+.diamond-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.diamond {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  animation: roll 2s infinite linear;
+}
+
+@keyframes roll {
+  0%   { transform: rotate(45deg) translateX(0); }
+  50%  { transform: rotate(225deg) translateX(30px); }
+  100% { transform: rotate(405deg) translateX(0); }
+}
+body.theme {
+  font-family: Arial, sans-serif;
+  padding: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.theme.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.plan-btn {
+  margin: 10px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.plan-btn:hover {
+  background-color: #0056b3;
+}
+
+.note {
+  margin-top: 30px;
+  font-size: 14px;
+}
+
+#toggle-mode {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #666;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Dark mode button tweak */
+body.theme.dark-mode #toggle-mode {
+  background-color: #bbb;
+  color: black;
+}
